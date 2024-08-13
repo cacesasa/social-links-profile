@@ -5,10 +5,31 @@
     box-sizing: border-box;
 }
 
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+  }
+
+  body, h1, h2, h3, h4, p,
+figure, blockquote, dl, dd {
+  margin-block-end: 0;
+}
+
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+h1, h2, h3, h4,
+button, input, label {
+  line-height: 1.1;
+}
+
 /* CUSTOM PROPERTIES */
 :root {
-    --paragraph-font-size: 14px;
-    --h1-font-size: 24px;
+    --paragraph-font-size: 0.875rem;
+    --h1-font-size: 1.5rem;
 
     --clr-grey-700: hsl(0, 0%, 20%);
     --clr-grey-800: hsl(0, 0%, 12%);
@@ -17,6 +38,13 @@
     --clr-white: hsl(0, 0%, 100%);
     --clr-green: hsl(75, 94%, 57%);
 }
+
+h1, h2,
+h3, h4 {
+  text-wrap: balance;
+}
+/* END RESET */
+
 
 /* FONTS */
 @font-face {
@@ -32,6 +60,8 @@ body {
     font-size: var(--paragraph-font-size);
     color: var(--clr-white);
     background-color: var(--clr-grey-900);
+    min-height: 100vh;
+    line-height: 1.5;
 }
 
 /* LAYOUT */
@@ -44,10 +74,10 @@ body {
 }
 
 .social_links {
-    width: 327px;
+    width: 20.4375rem;
     display: grid;
-    padding: 24px;
-    border-radius: 12px;
+    padding: 1.5rem;
+    border-radius: 0.75rem;
     background: var(--clr-grey-800);
     place-items: center;
 }
@@ -59,22 +89,22 @@ body {
 
 .hero img {
     border-radius: 50%;
-    width: 88px;
+    width: 5.5rem;
 }
 
 .hero h1 {
     font-size: var(--h1-font-size);
     font-weight: 400;
-    margin: 24px 0 10px 0;
+    margin: 1.5rem 0 0.625rem 0;
 }
 
 .location {
-    margin: 0 0 24px 0;
+    margin: 0 0 1.5rem 0;
     color: var(--clr-green);
 }
 
 .description {
-    margin: 0 0 24px 0;
+    margin: 0 0 1.5rem 0;
 }
 
 .navbar {
@@ -84,7 +114,7 @@ body {
 .nav_links {
     display: flex;
     flex-direction: column;    
-    padding-left: 0px;
+    padding-left: 0;
     margin: 0;
     list-style: none;
     gap:16px;
@@ -93,13 +123,13 @@ body {
 .nav_links li a {
     display: block;
     width: 100%;
-    height: 45px;
+    height: 2.8125rem;
     text-align: center;
     align-self: center;
-    line-height: 45px;
+    line-height: 2.8125rem;
     text-decoration: none;
     background: var(--clr-grey-700);
-    border-radius: 8px;
+    border-radius: 0.5rem;
     color: var(--clr-white);
     font-weight: 600;
     transition-property: background;
@@ -123,17 +153,17 @@ body {
 
 
 /* Tablet Media Query */
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
     .social_links {
         width: 456px;
-        padding: 40px;
+        padding: 2.5rem;
     }
 }
 
 /* Desktop Media Query */
-@media (min-width: 1024px) {
+@media (min-width: 64rem) {
     .social_links {
-        width: 384px;
-        padding: 40px;
+        width: 24rem;
+        padding: 2.5rem;
     }
 }
